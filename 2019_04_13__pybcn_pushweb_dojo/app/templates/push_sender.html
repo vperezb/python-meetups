@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="row">
+    <div class="col s12">
+        <h4>Send push to token</h4>
+        <form method="POST" action="{{ url_for('send_push_by_token')}}">
+            <div class="input-field col s12">
+                <input name="fcm_token" id="fcm_token" type="text">
+                <label for="fcm_token">FCM token</label>
+            </div>
+            <div class="input-field col s12">
+                    <textarea name ="push_data" id="push_data" class="materialize-textarea" value=""></textarea>
+                    <label for="push_data">Push Data</label>
+                    <span class="helper-text" data-error="wrong" data-success="right">Leave blank for defaul object</span>
+            </div>
+            <input type="submit" value="Send push"/>
+        </form>
+    </div>
+    <div class="col s12">
+            <h4>Suscribe token to topic</h4>
+            <form method="POST" action="{{ url_for('suscribe_token_to_topic')}}">
+                <div class="input-field col s12">
+                    <input id="fcm_token" type="text">
+                    <label for="fcm_token">FCM token</label>
+                </div>
+                <div class="input-field col s12">
+                        <input id="fcm_topic" type="text">
+                        <label for="fcm_topic">FCM topic</label>
+                </div>
+                <input type="submit" value="Send push"/>
+            </form>
+    </div>
+    <div class="col s12">
+            <h4>Send push to topic</h4>
+            <form method="POST" action="{{ url_for('send_push_by_topic')}}">
+                <div class="input-field col s12">
+                    <input id="fcm_topic" type="text">
+                    <label for="fcm_topic">FCM topic</label>
+                </div>
+                <div class="input-field col s12">
+                        <textarea id="push_data" class="materialize-textarea" value=""></textarea>
+                        <label for="push_data">Push Data</label>
+                        <span class="helper-text" data-error="wrong" data-success="right">Leave blank for defaul object</span>
+                </div>
+                <input type="submit" value="Send push"/>
+            </form>
+        </div>
+</div>
+{% endblock %}

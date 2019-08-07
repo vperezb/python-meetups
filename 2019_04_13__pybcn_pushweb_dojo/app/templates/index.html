@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Libro de visitas</title>
+</head>
+<body>
+<h1>Por ahora han firmado</h1>
+    {% for r in result %}
+        <h2>{{ r.nombre }}</h2>
+        <p>{{ r.comentario }}</p>
+    {% endfor %}
+</body>
+</html>

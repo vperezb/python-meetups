@@ -1,0 +1,14 @@
+type Query {
+  Films(title: String!): Film
+}
+
+type Film {
+  title: String!
+  rating: Float
+  planets: [Planet!]
+}
+
+type Planet {
+  name: String!
+  gravity: String
+}

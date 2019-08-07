@@ -1,0 +1,31 @@
+# Hidden Files
+.*
+!.gitignore
+
+# Credentials
+.credentials
+
+# Python
+*.pyc
+__pycache__/
+
+# Temporary Items
+*.tmp
+*.tmp.*
+
+# Virtual Environments
+Env/
+venv/
+
+# Notebooks
+**/.ipynb_checkpoints/
+
+# VSCode
+.vscode/
+
+# Pycharm
+.idea/
+
+# Pypi files
+build/
+dist/

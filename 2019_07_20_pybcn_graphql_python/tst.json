@@ -1,0 +1,14 @@
+{
+    "title" : "helloooo",
+    "rating" : 6.2,
+    "planets" : [ 
+        {
+            "name": "String",
+            "gravity": "String"
+        }, 
+        {
+            "name": "String",
+            "gravity": "String"
+        }
+    ]
+}

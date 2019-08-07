@@ -1,0 +1,11 @@
+Traceback (most recent call last):
+  File "find_combinations.py", line 56, in <module>
+    print (flightd)
+NameError: name 'flightd' is not defined
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "find_combinations.py", line 66, in <module>
+    sys.stderr.write(e +     "\n")
+TypeError: unsupported operand type(s) for +: 'NameError' and 'str'
