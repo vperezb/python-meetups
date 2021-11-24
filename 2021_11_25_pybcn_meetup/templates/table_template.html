@@ -1,0 +1,10 @@
+<h2>The results</h2>
+
+<table style="border:1px solid black">
+    {% for item in data %}
+    <tr>
+       <td>{{ loop.index }}</td>
+       <td>{{ item }}</td>
+    </tr>
+    {% endfor %}
+</table>

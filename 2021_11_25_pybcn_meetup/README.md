@@ -1,4 +1,4 @@
-# Serverless WebApp using GoogleAppEngine
+# 2021_11_25 - Serverless WebApp using GoogleAppEngine
 
 Based on the quickstart example https://cloud.google.com/appengine/docs/standard/python3/building-app
 
@@ -25,3 +25,9 @@ Google Slides Presentation: https://docs.google.com/presentation/d/e/2PACX-1vS4S
 0. Set credentials for the environment `set GOOGLE_APPLICATION_CREDENTIALS=path/to/your/credentials.json`
 0. In the same dir, run `python main.py`
 
+### Deploy
+
+* gcloud init
+* gcloud projects list
+* gcloud config set project my-project-1470411376725
+* gcloud app deploy app.yaml
