@@ -1,4 +1,8 @@
-# How to run it
+# Serverless WebApp using GoogleAppEngine
+
+Based on the quickstart example https://cloud.google.com/appengine/docs/standard/python3/building-app
+
+Google Slides Presentation: https://docs.google.com/presentation/d/e/2PACX-1vS4SdF2XM9-mip0_WvLNEFAYCObsZW6O1iZvWboT_sfx2I_jU1zJoMSyh_4Mfk0UhNymuf3It4mRW5-/pub?start=false&loop=false&delayms=3000
 
 ## Windows
 
@@ -9,6 +13,7 @@
 * Install `virtualenvwrapper`
 * Install Google Cloud SDK https://cloud.google.com/sdk/docs/install
 * Create a project in Gcloud https://console.cloud.google.com/
+
 
 ### Steps
 
