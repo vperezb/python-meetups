@@ -1,4 +1,4 @@
-from flask import Flask, json, render_template, jsonify
+from flask import Flask, json, render_template, jsonify, abort
 
 import os
 
@@ -12,6 +12,12 @@ app = Flask(__name__)
 @app.route('/', methods = ['GET'])
 def root():
     return '<h1>Hello PyBcn example</h1>' + '<p>{}</p>'.format(os.getenv('SERVICE'))
+
+@app.route('/private', methods = ['GET'])
+def root_private():
+    if os.getenv('SERVICE') != 'private':
+        return 'SOY <p>{}</p>'.format(os.getenv('SERVICE'))
+    return '<h1>Hello PyBcn example</h1>' + 'SOY <p>{}</p>'.format(os.getenv('SERVICE'))
 
 
 @app.route('/save-stuff', methods = ['GET'])

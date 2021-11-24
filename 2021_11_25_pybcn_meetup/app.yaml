@@ -14,4 +14,4 @@
 
 runtime: python39
 env_variables:
-    SERVICE: 2
+    SERVICE: "normal"

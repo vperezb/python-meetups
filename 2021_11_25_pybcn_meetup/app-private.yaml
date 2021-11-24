@@ -16,4 +16,4 @@ runtime: python39
 service: private
 
 env_variables:
-    SERVICE: 1
+    SERVICE: "private"
