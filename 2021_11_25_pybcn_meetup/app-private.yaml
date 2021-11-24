@@ -13,5 +13,7 @@
 # limitations under the License.
 
 runtime: python39
+service: private
+
 env_variables:
-    SERVICE: 2
+    SERVICE: 1

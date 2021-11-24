@@ -1,5 +1,7 @@
 from flask import Flask, json, render_template, jsonify
 
+import os
+
 from google.cloud import datastore
 
 datastore_client = datastore.Client()
@@ -9,7 +11,7 @@ app = Flask(__name__)
 
 @app.route('/', methods = ['GET'])
 def root():
-    return '<h1>Hello PyBcn example</h1>'
+    return '<h1>Hello PyBcn example</h1>' + '<p>{}</p>'.format(os.getenv('SERVICE'))
 
 
 @app.route('/save-stuff', methods = ['GET'])
