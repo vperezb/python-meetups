@@ -1,6 +1,7 @@
-from flask import Flask, json, render_template, jsonify, abort
-
 import os
+
+from flask import Flask, json, render_template, jsonify, abort
+import datetime
 
 from google.cloud import datastore
 
@@ -9,9 +10,9 @@ datastore_client = datastore.Client()
 
 app = Flask(__name__)
 
-@app.route('/', methods = ['GET'])
+@app.get('/')
 def root():
-    return '<h1>Hello PyBcn example</h1>' + '<p>{}</p>'.format(os.getenv('SERVICE'))
+    return '<h1>Hello PyBcn example</h1>' + '<p>{}</p>'.format(os.getenv('SERVICE', 'LOCAL'))
 
 @app.route('/private', methods = ['GET'])
 def root_private():
@@ -26,12 +27,14 @@ def save_stuff():
     try:
         entity = datastore.Entity(key=datastore_client.key('my_entity_type'))
         entity.update({
-            'hello': 'world'
+            'hello': 'world',
+            'datetime': datetime.datetime.now(),
+            'hola': 'que tal'
         })
         datastore_client.put(entity)
     except Exception as e:
         pass
-    return '<h1>Result</h1><p>{}</p>'.format(e)
+    return '<h1>Result</h1><p>{}</p><p><a href="/read-stuff-json">Read json</a></p>'.format(e)
 
 @app.route('/read-stuff', methods = ['GET'])
 def read_stuff():
